@@ -1,4 +1,6 @@
 version: "3.3"
+volumes:
+  db-data:
 services:
   nginx_front:
     container_name: nginx-front
@@ -26,3 +28,23 @@ services:
       - ./api:/usr/src/api
     ports:
       - 9000:9000
+  database:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: api
+      MYSQL_USER: api
+      MYSQL_PASSWORD: api
+    ports:
+      - 3306:3306
+    volumes:
+      - db-data:/var/lib/mysql
+  adminer:
+    image: adminer
+    container_name: adminer
+    environment:
+      ADMINER_DESIGN: pepa-linha
+      ADMINER_DEFAULT_SERVER: database
+    ports:
+      - 8080:8080
