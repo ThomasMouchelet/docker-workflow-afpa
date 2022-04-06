@@ -475,3 +475,19 @@ $classes[] = 'Symfony\Component\Validator\Constraints\NotCompromisedPasswordVali
 $classes[] = 'Symfony\Component\WebLink\EventListener\AddLinkHeaderListener';
 
 $preloaded = Preloader::preload($classes);
+require_once __DIR__.'/twig/3e/3e21c2cc749e20aa9d1d1f6dd77b7ab4f0a87787f1585d03ad5380c97d17c803.php';
+require_once __DIR__.'/twig/52/52385be784a11f149907f34495b1110973a24dbdbf841bc73aad075be7d63e15.php';
+require_once __DIR__.'/twig/85/85b09571ff28bac11a395741c04d28c6467a8235faf95527dac5f3b79a8318ba.php';
+require_once __DIR__.'/twig/66/66510f395e3efeab42573f8f8a8e4b36f580da4bcd42e3b62927bcb76578c419.php';
+require_once __DIR__.'/twig/7a/7a90d4be3ed70c8bca198a6cb8e7f4246627af807530596d303a99c56a292545.php';
+require_once __DIR__.'/twig/7f/7fc0916960bfd03452d092d4c432148cb659f153353ffa4b7ec9f57588baeb1c.php';
+require_once __DIR__.'/twig/c2/c259bb2dd354ae5d33ad01170a422fc69993fbc2ada6288233b054b6aaa77321.php';
+require_once __DIR__.'/twig/98/98fad6ceefacc3564d54eba2b165c58bdb999cf3936f019772b568d4cb869da7.php';
+require_once __DIR__.'/twig/b6/b6e573f888a61bc8f2a1e8e6933896d1f85e305535b86751726247c89f462219.php';
+require_once __DIR__.'/twig/28/28cc2f3e05bd9305d4908221b91aff28108b1dbf202d610ab1d418a865d08e18.php';
+require_once __DIR__.'/twig/35/3567e6aec072af55d4f9f7af4e764b3db907be31cf23ec107d656eeed4090992.php';
+
+$classes = [];
+$classes[] = 'Symfony\\Component\\Routing\\Generator\\CompiledUrlGenerator';
+$classes[] = 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableCompiledUrlMatcher';
+$preloaded = Preloader::preload($classes, $preloaded);
