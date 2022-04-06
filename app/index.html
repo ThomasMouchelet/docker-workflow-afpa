@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Title HTML DOCKER</h1>
+    <h1>Title HTML DOCKER TEST</h1>
+
+    <script>
+        fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+    </script>
 </body>
 </html>
