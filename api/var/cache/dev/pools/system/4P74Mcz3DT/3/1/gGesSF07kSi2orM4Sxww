@@ -196,7 +196,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                     'order' => null,
                     'output' => null,
                     'pagination_client_enabled' => null,
-                    'pagination_client_items_per_page' => null,
+                    'pagination_client_items_per_page' => true,
                     'pagination_client_partial' => null,
                     'pagination_via_cursor' => null,
                     'pagination_enabled' => null,
