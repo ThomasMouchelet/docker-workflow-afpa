@@ -1,5 +1,5 @@
 de := docker exec php
-sy := php bin/console
+sy := $(de) php bin/console
 
 .PHONY: up
 up: ## up and build containers
@@ -11,15 +11,19 @@ install: ## install composer dependencies
 
 .PHONY: migration
 migration: ## execute migration
-	$(de) $(sy) d:m:m -q
+	$(sy) d:m:m -q
 
 .PHONY: fixtures
 fixtures: ## execute fixtures
-	$(de) $(sy) d:f:l -q
+	$(sy) d:f:l -q
 
 .PHONY: start
 start: ## start react app
 	cd app && npm i && npm start
+
+.PHONY: clear
+clear: 
+	$(sy) cache:clear
 
 .PHONY: init
 init: up install migration fixtures start
