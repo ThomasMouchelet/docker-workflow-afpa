@@ -17,5 +17,9 @@ migration: ## execute migration
 fixtures: ## execute fixtures
 	$(de) $(sy) d:f:l -q
 
+.PHONY: start
+start: ## start react app
+	cd app && npm i && npm start
+
 .PHONY: init
-init: up install migration fixtures
+init: up install migration fixtures start
